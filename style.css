@@ -1877,3 +1877,242 @@ body.dark {
     }
 
 }
+/* ================= MOBILE NAVBAR FIX ================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 18px;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .nav-actions {
+        display: none !important;
+    }
+
+    .menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border: 1px solid var(--border);
+        border-radius: 10px;
+
+        background: var(--card);
+        color: var(--text);
+
+        font-size: 24px;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.show {
+        display: flex !important;
+
+        flex-direction: column;
+        gap: 8px;
+
+        padding: 15px 18px 20px;
+
+        background: var(--card);
+        border-top: 1px solid var(--border);
+    }
+
+    .mobile-menu a,
+    .mobile-menu button {
+        width: 100%;
+
+        padding: 13px;
+
+        border: none;
+        border-radius: 9px;
+
+        background: var(--soft);
+        color: var(--text);
+
+        text-align: left;
+        font-weight: 700;
+    }
+
+    .mobile-menu a:hover {
+        color: var(--accent);
+    }
+
+    .mobile-menu button:last-child {
+        background: var(--accent);
+        color: white;
+    }
+}
+/* ===== MOBILE NAVBAR FIX ===== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-container {
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 18px;
+    }
+
+    /* Logo visible */
+    .navbar .logo {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Desktop links hide */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* Desktop buttons hide */
+    .nav-actions {
+        display: none !important;
+    }
+
+    /* Menu button visible */
+    .menu-btn {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border: 1px solid var(--border);
+        border-radius: 10px;
+
+        background: var(--card);
+        color: var(--text);
+
+        font-size: 24px;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+        display: none;
+        width: 100%;
+        padding: 15px 18px 20px;
+        background: var(--card);
+        border-top: 1px solid var(--border);
+    }
+
+    .mobile-menu.show {
+        display: flex !important;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
+/* =========================================
+   SAME NAVBAR ON MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        padding: 12px 10px;
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        font-size: 19px;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        display: flex !important;
+        gap: 10px;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-actions {
+        display: flex !important;
+        gap: 4px;
+        align-items: center;
+    }
+
+    .icon-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .nav-login,
+    .nav-signup {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+
+    .menu-btn {
+        display: none !important;
+    }
+
+}
+
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 500px) {
+
+    .nav-container {
+        padding: 10px 7px;
+        gap: 5px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 6px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .nav-actions {
+        gap: 3px;
+    }
+
+    .icon-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+
+    .nav-login,
+    .nav-signup {
+        padding: 6px 6px;
+        font-size: 9px;
+    }
+
+}

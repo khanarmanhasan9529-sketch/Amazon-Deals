@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setupMobileMenu();
 
     setupModalEvents();
+    setupMobileMenu();
 
 
     /*
