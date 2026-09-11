@@ -2116,3 +2116,195 @@ body.dark {
     }
 
 }
+/* =========================================
+   FINAL RESPONSIVE NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Desktop */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-actions {
+        gap: 5px;
+    }
+
+    .nav-actions button {
+        font-size: 11px;
+        padding: 7px 9px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-container {
+        display: grid !important;
+
+        grid-template-columns: 1fr auto;
+
+        grid-template-rows: auto auto;
+
+        width: 100%;
+
+        padding: 10px 12px;
+
+        gap: 10px 8px;
+    }
+
+    /* Logo */
+    .logo {
+        grid-column: 1;
+        grid-row: 1;
+
+        font-size: 18px;
+
+        white-space: nowrap;
+    }
+
+    /* Right side buttons */
+    .nav-actions {
+        grid-column: 2;
+        grid-row: 1;
+
+        display: flex !important;
+
+        align-items: center;
+
+        justify-content: flex-end;
+
+        gap: 5px;
+    }
+
+    .nav-actions button {
+        padding: 7px 9px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+    }
+
+    /* Navigation links */
+    .nav-links {
+        grid-column: 1 / 3;
+        grid-row: 2;
+
+        display: flex !important;
+
+        width: 100%;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 20px;
+
+        padding-top: 5px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+
+        white-space: nowrap;
+    }
+
+    /* Hide hamburger */
+    .menu-btn {
+        display: none !important;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .nav-container {
+        padding: 9px 8px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .nav-actions {
+        gap: 3px;
+    }
+
+    .nav-actions button {
+        padding: 6px 7px;
+
+        font-size: 9px;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+}
