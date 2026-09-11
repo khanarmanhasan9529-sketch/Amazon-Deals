@@ -3064,3 +3064,17 @@ img {
         height: 125px !important;
     }
 }
+.download-app-btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.download-app-btn:hover {
+    transform: translateY(-3px);
+}
