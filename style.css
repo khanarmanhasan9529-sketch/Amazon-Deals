@@ -2155,6 +2155,75 @@ body.dark {
 
 
 /* =========================================
+   AMAZON DEALS - FINAL RESPONSIVE CSS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 14px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.nav-links a {
+    white-space: nowrap;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* =========================================
    TABLET
 ========================================= */
 
@@ -2167,7 +2236,6 @@ body.dark {
 
     .logo {
         font-size: 18px;
-        white-space: nowrap;
     }
 
     .nav-links {
@@ -2182,108 +2250,107 @@ body.dark {
         gap: 5px;
     }
 
-    .nav-actions button {
+    .nav-actions button,
+    .nav-login,
+    .nav-signup {
+        padding: 7px 8px;
         font-size: 11px;
-        padding: 7px 9px;
+        white-space: nowrap;
     }
 }
 
-
 /* =========================================
-   MOBILE
+   MOBILE NAVBAR
 ========================================= */
 
 @media (max-width: 650px) {
 
-    .navbar {
-        width: 100%;
-    }
-
     .nav-container {
-        display: grid !important;
-
-        grid-template-columns: 1fr auto;
-
-        grid-template-rows: auto auto;
-
         width: 100%;
-
         padding: 10px 12px;
 
-        gap: 10px 8px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+
+        gap: 10px;
     }
 
     /* Logo */
+
     .logo {
         grid-column: 1;
         grid-row: 1;
 
         font-size: 18px;
-
         white-space: nowrap;
     }
 
-    /* Right side buttons */
+    /* Login / signup / theme */
+
     .nav-actions {
         grid-column: 2;
         grid-row: 1;
 
         display: flex !important;
-
         align-items: center;
-
         justify-content: flex-end;
 
-        gap: 5px;
+        gap: 4px;
     }
 
-    .nav-actions button {
-        padding: 7px 9px;
-
+    .nav-actions button,
+    .nav-login,
+    .nav-signup {
+        padding: 6px 8px;
         font-size: 10px;
 
         white-space: nowrap;
     }
 
-    /* Navigation links */
+    /* Main links */
+
     .nav-links {
         grid-column: 1 / 3;
         grid-row: 2;
 
-        display: flex !important;
-
         width: 100%;
 
+        display: flex !important;
+        align-items: center;
         justify-content: center;
 
-        align-items: center;
+        gap: 18px;
 
-        gap: 20px;
+        overflow-x: auto;
+        scrollbar-width: none;
 
-        padding-top: 5px;
+        padding: 2px 0;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-links a {
-        font-size: 12px;
-
+        font-size: 11px;
         white-space: nowrap;
     }
 
-    /* Hide hamburger */
     .menu-btn {
         display: none !important;
     }
 }
 
-
 /* =========================================
-   SMALL PHONES
+   SMALL MOBILE
 ========================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
 
     .nav-container {
         padding: 9px 8px;
+        gap: 7px;
     }
 
     .logo {
@@ -2294,17 +2361,220 @@ body.dark {
         gap: 3px;
     }
 
-    .nav-actions button {
-        padding: 6px 7px;
-
+    .nav-actions button,
+    .nav-login,
+    .nav-signup {
+        padding: 5px 6px;
         font-size: 9px;
     }
 
     .nav-links {
-        gap: 13px;
+        gap: 14px;
+        justify-content: flex-start;
+        padding-left: 5px;
     }
 
     .nav-links a {
         font-size: 10px;
     }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .nav-container {
+        padding: 8px 6px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .nav-actions button,
+    .nav-login,
+    .nav-signup {
+        padding: 5px;
+        font-size: 8px;
+    }
+
+    .nav-links {
+        gap: 11px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+}
+
+/* =========================================
+   CONTENT RESPONSIVE
+========================================= */
+
+.container,
+.main-container,
+.hero,
+.products-section,
+.products-container {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 650px) {
+
+    .container,
+    .main-container,
+    .hero,
+    .products-section,
+    .products-container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(28px, 8vw, 42px);
+        line-height: 1.15;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Product grid */
+
+    .products-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* =========================================
+   ONE COLUMN FOR VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   POPUP RESPONSIVE
+========================================= */
+
+.modal,
+.popup,
+.auth-modal,
+.login-popup {
+    max-width: 100%;
+}
+
+@media (max-width: 500px) {
+
+    .modal,
+    .popup,
+    .auth-modal,
+    .login-popup {
+        width: calc(100% - 24px);
+        max-width: 420px;
+        margin: 12px;
+    }
+
+    .modal-content,
+    .popup-content,
+    .auth-modal-content,
+    .login-popup-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 16px;
+    }
+
+    .modal input,
+    .popup input,
+    .auth-modal input,
+    .login-popup input {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+@media (max-width: 650px) {
+
+    footer {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .footer-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button,
+a {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Prevent long text from breaking layout */
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span {
+    overflow-wrap: break-word;
 }
