@@ -2578,3 +2578,138 @@ a,
 span {
     overflow-wrap: break-word;
 }
+/* ===== MOBILE APP FIX ===== */
+
+html,
+body,
+#root {
+    width: 100%;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+* {
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 100% !important;
+    }
+
+    .nav-container {
+        width: 100% !important;
+        padding: 10px 12px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    .logo {
+        font-size: 18px !important;
+        flex: 1 !important;
+    }
+
+    .nav-links {
+        order: 3 !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 18px !important;
+        overflow-x: auto !important;
+    }
+
+    .nav-actions {
+        display: flex !important;
+        gap: 4px !important;
+    }
+
+    .nav-actions button,
+    .nav-login,
+    .nav-signup {
+        font-size: 10px !important;
+        padding: 7px 8px !important;
+        white-space: nowrap !important;
+    }
+
+    .hero {
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 60px 15px !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 10vw, 48px) !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    .hero-buttons {
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100% !important;
+        max-width: 330px !important;
+    }
+
+    .products-grid {
+        width: 100% !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .product-card {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    .product-image {
+        height: 160px !important;
+    }
+
+    .section {
+        width: 100% !important;
+        padding: 45px 12px !important;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 15px !important;
+    }
+
+    .nav-actions button,
+    .nav-login,
+    .nav-signup {
+        font-size: 8px !important;
+        padding: 6px !important;
+    }
+
+    .nav-links {
+        gap: 12px !important;
+    }
+
+    .nav-links a {
+        font-size: 10px !important;
+    }
+
+    .hero h1 {
+        font-size: 30px !important;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
