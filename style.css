@@ -2713,3 +2713,81 @@ body,
         grid-template-columns: 1fr !important;
     }
 }
+/* ==========================================
+   ANDROID APP MOBILE VIEW FIX
+========================================== */
+
+html,
+body,
+#root {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+@media screen and (max-width: 600px) {
+
+    .products-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .product-card {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .product-image {
+        width: 100% !important;
+        height: 150px !important;
+    }
+
+    .product-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .hero {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 55px 15px !important;
+    }
+
+    .hero h1 {
+        font-size: 38px !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero p {
+        font-size: 14px !important;
+    }
+
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 90% !important;
+        max-width: 320px !important;
+    }
+
+    .section {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 40px 12px !important;
+    }
+
+    .nav-container {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+}
